@@ -1,0 +1,641 @@
+﻿body {
+    background: #fafafa;
+    font-size: 16px;
+}
+
+.loginbody {
+    background-image: url('../Images/Background_login.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.footer {
+    display: flex;
+    margin-top: 8px;
+}
+
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    background-color: #ffffff;
+    width: 650px;
+    height: 500px;
+    box-shadow: 1px 1px 0.5px 0.25px #000000;
+}
+
+.logo {
+    width: 140px;
+    height: 40px;
+}
+
+.img {
+    display: flex;
+    justify-content: center;
+}
+
+p {
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.7em;
+    color: #999;
+}
+
+a,
+a:hover,
+a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.navbar {
+    height: 56px;
+    padding: 4px 4px 4px 8px;
+    background: #EEEEEE !important;
+    border: none;
+    border-radius: 0;
+    margin-bottom: 16px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-btn {
+    box-shadow: none;
+    outline: none !important;
+    border: none;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px dashed #ddd;
+    margin: 40px 0;
+}
+
+i,
+span {
+    display: inline-block;
+}
+/* ---------------------------------------------------
+SIDEBAR STYLE
+----------------------------------------------------- */
+.wrapper {
+    display: flex;
+    align-items: stretch;
+}
+
+.container-sidebar {
+    min-width: 256px;
+    max-width: 256px;
+}
+
+#sidebar {
+    min-width: 256px;
+    max-width: 256px;
+    background: #972D2D;
+    transition: all 0.3s;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 8px;
+    z-index: 1;
+}
+
+.container-sidebar.active {
+    transition: 0.5s;
+    min-width: 74px;
+    max-width: 74px;
+}
+
+#sidebar.active {
+    min-width: 74px;
+    max-width: 74px;
+    text-align: center;
+}
+
+    #sidebar.active .sidebar-header h3,
+    #sidebar.active .CTAs {
+        display: none;
+    }
+
+    #sidebar.active .sidebar-header strong {
+        display: block;
+        justify-content: center;
+    }
+
+.sidebar-header h3 {
+    height: 32px;
+    padding: 0;
+    margin: 0;
+}
+
+#sidebar ul li {
+    color: white;
+    padding-bottom: 14px;
+}
+
+    #sidebar ul li a {
+        color: white !important;
+        text-align: left;
+    }
+
+        #sidebar ul li a:hover {
+            color: #850000;
+            background: #850000;
+            opacity: 100%;
+        }
+
+        #sidebar ul li a i {
+            height: 18px;
+        }
+
+        #sidebar ul li a span {
+            height: 18px;
+            padding-left: 4px;
+        }
+
+#sidebar.active ul li a {
+    padding: 12px 10px;
+    text-align: center;
+    font-size: 0.85em;
+}
+
+    #sidebar.active ul li a i {
+        display: block;
+        margin-bottom: 5px;
+        margin-right: 10px;
+    }
+
+    #sidebar.active ul li a span {
+        display: none;
+    }
+
+#sidebar.active ul ul a {
+    padding: 10px !important;
+}
+
+#sidebar ul.components {
+    padding-bottom: 16px;
+    padding-left: 16px;
+    padding-right: 16px;
+    background-color: #972D2D;
+}
+
+#sidebar ul li a {
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-radius: 4px;
+    font-size: 1.1em;
+    display: block;
+    opacity: 60%;
+}
+
+#sidebar .sidebar-header {
+    display: flex;
+    justify-content: center;
+    padding-top: 36px;
+    padding-bottom: 24px;
+    border-top-right-radius: 4px;
+    background-color: #972D2D !important;
+    color: #972D2D;
+}
+
+    #sidebar .sidebar-header strong {
+        display: none;
+        font-size: 1.8em;
+    }
+
+.barra-lateral--linha1 {
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 24px;
+}
+
+.barra-lateral--linha2 {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 16px;
+}
+/*-----------------------------------------------
+           CONFIG DROPDOWN COLLAPSE
+-----------------------------------------------*/
+
+.setaDrop {
+    position: relative;
+    display: block;
+    right: -175px;
+    transform: translateY(-50%);
+    transform: rotate(-90deg);
+    margin: 0px;
+    top: -22px;
+}
+
+a[aria-expanded="true"] .setaDrop {
+    position: relative;
+    display: block;
+    right: -175px;
+    transform: translateY(-50%);
+    transform: rotate(0deg);
+    top: -22px;
+}
+
+#sidebar.active .setaDrop {
+    position: relative;
+    display: block;
+    right: -28px;
+    transform: translateY(-50%);
+    transform: rotate(-90deg);
+    margin: 0px;
+    top: -18px;
+}
+
+.tamanho-link-sidebar {
+    height: 51px;
+}
+
+#sidebar.active .tamanho-link-sidebar {
+    width: 42px;
+    height: 44px;
+}
+
+
+#sidebar.active #collapsePages-Configuracao {
+    position: absolute;
+    left: calc(9.5rem / 2);
+    z-index: 1;
+    top: 120px; /*específico para o configuração*/
+}
+
+/*-----------------------------------------------
+           FIM CONFIG DROPDOWN COLLAPSE
+-----------------------------------------------*/
+ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+    background: #972D2D;
+}
+
+ul.CTAs {
+    padding: 20px;
+}
+
+    ul.CTAs a {
+        text-align: center;
+        font-size: 0.9em !important;
+        display: block;
+        border-radius: 5px;
+        margin-bottom: 5px;
+    }
+
+a.download {
+    background: #fff;
+    color: #7386D5;
+}
+
+a.article,
+a.article:hover {
+    background: #6d7fcc !important;
+    color: #fff !important;
+}
+
+a:link:hover {
+    color: #ffffff !important;
+}
+
+.btn-secondary {
+    color: #850000 !important;
+}
+
+.btn-secondary:hover {
+    color: #ffffff !important;
+}
+
+
+.btn-primary {
+    color: #ffffff !important;
+}
+
+.btn-primary:hover {
+    color: #ffffff !important;
+}
+
+.btn-selec-inicial {
+    width: 320px;
+    height: 40px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 8px black;
+    color: #850000;
+    border-left-color: #850000;
+    border-left-width: 4px;
+}
+
+.btn-selec-inicial:focus {
+    width: 320px;
+    height: 40px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 8px black;
+    color: #850000;
+    border-left-color: #850000;
+    border-left-width: 4px;
+}
+
+/* ---------------------------------------------------
+CONTENT STYLE
+----------------------------------------------------- */
+.container-content {
+    width: 100%;
+    min-height: 100vh;
+    transition: all 0.3s;
+}
+
+#content {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+.body-content {
+    padding: 10px;
+    margin: 10px;
+}
+
+.container-fluid {
+    display: flex;
+    padding-left: 10px;
+    justify-content: flex-start !important;
+}
+
+.btn-info {
+    color: black;
+    background-color: white;
+    width: 35px;
+    height: 35px;
+    border-color: black;
+}
+
+    .btn-info:hover, .btn-info::before, .btn-info::after, .btn-info:active {
+        color: #972D2D;
+        background-color: whitesmoke;
+        background: none;
+        width: 35px;
+        height: 35px;
+        border-color: black;
+    }
+
+.container-fluid--button {
+    display: flex;
+    left: 4px;
+}
+
+#sidebarCollapse {
+    display: flex;
+    justify-content: flex-start !important;
+    background-color: #EEEEEE;
+    color: black;
+    padding: 6px;
+    margin: 4px;
+}
+
+/*---------------------------------------------------------------------
+                            NOME LOGADO
+---------------------------------------------------------------------*/
+
+
+.nomeLogin {
+    height: 46px;
+    margin-right: 250px;
+}
+
+
+.nomeLogin ul li a {
+    background: none;
+    padding-top: 10px;
+}
+
+.nomeLogin ul ul {
+    height: 46px !important;
+}
+
+
+/*
+-----------------------------
+    modulo COM CLASSE DO SIDEBAR NÃO ATIVO
+-----------------------------*/
+#menu-lateral-modulo {
+    display: flex;
+    padding-bottom: 8px !important;
+}
+
+#menu-lateral-modulo--itens {
+    height: 49px;
+    position: relative;
+    width: 224px;
+    opacity: 100%;
+    align-items: center;
+    background-color: #850000;
+    border-radius: 4px;
+    padding-left: 12px;
+    padding-right: 8px;
+    padding-top: 6px;
+    padding-bottom: 10px;
+}
+
+.nome-modulo {
+    grid-area: nome-modulo;
+    color: white;
+    font-size: 25px;
+    padding-left: 12px
+}
+
+.nome-modulo-menor {
+    display: none;
+}
+
+/*---------------------------------------
+    modulo COM CLASSE DO SIDEBAR ACTIVE
+-----------------------------------------*/
+
+.active ul li #menu-lateral-modulo--itens {
+    padding-left: 1px;
+    padding-right: 0px;
+    padding-top: 4px;
+}
+
+.active ul li div .nome-modulo {
+    transition: 0.1s;
+    display: none;
+}
+
+.active ul li div .nome-modulo-menor {
+    display: flex;
+    padding-left: 6px;
+}
+/*-------------------------------------
+        DESCRIÇÃO DA VERSÃO
+-------------------------------------*/
+.versao {
+    padding-bottom: 8px !important;
+}
+
+.texto-versao {
+    text-align: center;
+    font-size: 10px;
+    opacity: 60%;
+    color: white;
+}
+
+
+/* ---------------------------------------------------
+MEDIAQUERIES
+----------------------------------------------------- */
+@media (max-width: 768px) {
+
+    .login {
+        width: 325px;
+    }
+
+    .logo {
+        width: 100px;
+        height: 30px;
+    }
+
+    .footer {
+        display: flex;
+        margin-top: 9%;
+    }
+
+
+    .footer {
+        display: flex;
+        margin-top: 9%;
+    }
+
+    #sidebar {
+        min-width: 74px;
+        max-width: 74px;
+        text-align: center;
+        margin-left: -80px !important;
+    }
+
+    .container-sidebar {
+        transition: 0.5s;
+        min-width: 74px;
+        max-width: 74px;
+        margin-left: -80px !important;
+    }
+
+        .container-sidebar.active {
+            transition: 0.5s;
+            min-width: 74px;
+            max-width: 74px;
+            margin-left: 0 !important;
+        }
+
+    #sidebar.active {
+        margin-left: 0 !important;
+    }
+
+    #sidebar .sidebar-header h3,
+    #sidebar .CTAs {
+        display: none;
+    }
+
+    #sidebar .sidebar-header strong {
+        display: block;
+    }
+
+    #sidebar.active ul li a {
+        padding: 12px 10px;
+    }
+
+    #sidebar ul li a {
+        padding: 12px 10px;
+    }
+
+        #sidebar ul li a span {
+            display: none;
+        }
+
+        #sidebar ul li a i {
+            margin-right: 0;
+            display: block;
+        }
+
+    #sidebar ul ul a {
+        padding: 10px !important;
+    }
+
+    #sidebar ul li a i {
+        font-size: 1.3em;
+    }
+
+    #sidebar {
+        margin-left: 0;
+    }
+
+    #sidebarCollapse span {
+        display: none;
+    }
+
+    #menu-lateral-modulo--itens {
+        padding-left: 1px;
+        padding-right: 0px;
+        padding-top: 4px;
+    }
+
+    .nome-modulo {
+        display: none;
+    }
+
+    .nomeLogin {
+        height: 46px;
+        margin-right: 50px;
+    }
+}
+
+@media screen and (min-device-width: 280px ) and (max-device-width: 290px) {
+    .navbar {
+        height: 77px;
+    }
+}
+
+
+@media (max-width: 992px) {
+    .nomeLogin {
+        display: flex;
+        height: 46px;
+        flex-wrap: nowrap;
+    }
+
+    semQuebra {
+        flex-wrap: nowrap;
+    }
+}
+
+/*# sourceMappingURL=estilo.css.map */
+
+#tittela {
+    height: 64px;
+    width: 100%;
+    padding: 16px;
+}
+
+#caminho {
+    height: 8px;
+    width: 100%;
+    padding: 19px;
+}
+
+#btn-menu {
+    width: 320px;
+    height: 40px;
+}
+
+.tamanho-padrao--icone {
+    display: inline-block ;
+    width: 24px ; 
+    text-align:center;
+}
